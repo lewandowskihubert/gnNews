@@ -1,0 +1,56 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #867070;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.logo-text > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    font-size: 36px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.opinion-header {
+    cursor: pointer;
+    font-size: 24px;
+    border-right: 2px solid black;
+    padding: 10px;
+}
+
+.switch-header {
+    margin-right: 12px;
+}
+
+.logo-text span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    
+  }
+
+  .header-buttons {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+  }
