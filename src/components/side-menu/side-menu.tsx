@@ -1,48 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { newsApi } from "../../services/newsapi/news-api";
 import {
   getCountriesAsync,
   selectCountryList,
 } from "../../slices/country-slice";
-import "./side-menu.css"
-import { NewsArticle } from "../../types/news-api";
+import { useNavigate } from "react-router-dom";
+import "./side-menu.css";
+import { getNewsAsync } from "../../slices/news-slice";
 
 export const SideMenu: React.FC = () => {
   const [selectedCountry, setSelectedCountry] = useState<string>("");
-  const [articles, setArticles] = useState<NewsArticle[]>([]);
   const dispatch = useAppDispatch();
-  let countryList = useAppSelector(selectCountryList);
+  const countryList = useAppSelector(selectCountryList);
+  const navigate = useNavigate();
 
-  const GetCountryList = async (): Promise<void> => {
-    dispatch(getCountriesAsync());
+  
+
+  const handleOnClick = (cca2: string) => {
+    if (selectedCountry !== cca2) {
+      setSelectedCountry(cca2);
+      navigate(`/country/${cca2.toLocaleLowerCase()}`);
+   
+    }
   };
 
   useEffect(() => {
-    GetCountryList();
-  }, []);
-
-  const handleCountry = async (country: string) => {
-    setSelectedCountry(country);
-    const newsArticles = await newsApi.getCountryNews(country);
-    console.log("newsArticles:", newsArticles);
-    if (newsArticles) {
-      setArticles(newsArticles as NewsArticle[]);
-    }
-  };
+    dispatch(getCountriesAsync());
+  }, [dispatch]);
 
   return (
     <div className="side-menu-container">
       <ul>
         {countryList.map((item) => (
           <li
-            onClick={() => handleCountry(item.cca2.toLocaleLowerCase())}
             key={item.cca2}
+            onClick={() => handleOnClick(item.cca2)}
+            className={selectedCountry === item.cca2 ? "active" : ""}
           >
-       
-              {" "}
-              
-            <span className="side-menu-img"> <img alt={item.flags.alt} src={item.flags.png} /></span>
+            <span className="side-menu-img">
+              <img alt={item.flags.alt} src={item.flags.png} />
+            </span>
             <span className="side-menu-item">{item.name.common}</span>
           </li>
         ))}

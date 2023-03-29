@@ -3,8 +3,8 @@
 export interface NewsArticle {
     
     author: string;
-    content:null;
-    description:null;
+    content:string | null;
+    description:string | null;
     publishedAt:string;
     source: {
       id:string;
@@ -12,6 +12,7 @@ export interface NewsArticle {
     }
     title:string;
     url:string;
+    urlToImage:string;
     
    
     

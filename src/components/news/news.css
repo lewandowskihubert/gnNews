@@ -1,0 +1,16 @@
+.news-card-container {
+   margin:10px 10px 10px 10px;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   overflow: hidden;
+}
+
+
+
+@media (max-width:600px) {
+    .news-card-container {
+        width:80%;
+    }
+}

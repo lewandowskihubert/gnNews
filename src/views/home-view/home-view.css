@@ -1,0 +1,16 @@
+.home-view-container {
+
+    height: 83vh;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  
+ 
+  }
+  
+  .SideMenu {
+    width: 200px;
+  }

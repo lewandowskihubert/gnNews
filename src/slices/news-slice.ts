@@ -11,7 +11,7 @@ interface newsArticlesState {
 
 const initialState : newsArticlesState = {
  news: [],
- display:false
+ display:true,
 }
 
 interface getNewsParams {

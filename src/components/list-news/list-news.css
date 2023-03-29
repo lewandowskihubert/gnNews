@@ -1,0 +1,17 @@
+.news-list-container {
+   
+     width: 100%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  
+    
+ }
+
+ @media (max-width:600px) {
+    .news-list-container {
+       width: 80%;
+    }
+    
+ }

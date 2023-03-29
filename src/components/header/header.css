@@ -1,11 +1,12 @@
 .header-container {
     display: flex;
     justify-content: space-between;
-    background-color: #867070;
-    height: 10vh;
-    width: 100%;
+    background-color: #ECEEF8;
     align-items: center;
-    text-align: center;
+   
+    height: 10vh;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 10px 5px 5px #ccc;
     
 
 }
@@ -15,29 +16,40 @@
     align-items: center;
     text-decoration: none;
     color: black;
+ 
+    
 }
 
 .logo-text {
-    display: flex;
-    align-items: center;
     margin-left: 12px;
     font-size: 36px;
-    letter-spacing: 6px;
+    letter-spacing: 8px;
     font-weight: bold;
     font-style: italic;
+    border: 3px solid #3057F8;
+    border-radius: 12px;
+    padding: 4px;
+ 
+    background: linear-gradient(to right, #3057F8 45%, #ECEEF8 50%);
+   
 }
 
 
 .opinion-header {
     cursor: pointer;
     font-size: 24px;
-    border-right: 2px solid black;
+    background-color: #3057F8;
     padding: 10px;
+    border-radius: 12px;
+    margin-right: 12px;
+    color:#fff;
 }
 
-.switch-header {
-    margin-right: 12px;
+.opinion-header:hover {
+    opacity: 0.8;
 }
+
+
 
 .logo-text span {
     display: flex;
@@ -45,12 +57,63 @@
     justify-content: center;
     height: 50px;
     width: 50px;
+    color:black;
+   
     
   }
 
-  .header-buttons {
-    display:flex;
-    align-items: center;
+ 
+
+  .left-side-header {
+    display: flex;
     justify-content: center;
-    gap:10px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 150px;
+    background-color: #ECEEF8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1;
+    text-align: center;
+   
+  }
+  
+  .dropdown-menu span {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .dropdown-toggle {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+  
+  
+
+ .dropdown-toggle{
+    display: none;
+ }
+
+
+
+ @media (max-width: 600px) {
+
+    .left-side-header {
+      display: none;
+    }
+    .dropdown-toggle {
+        display: block;
+      
+    }
   }
