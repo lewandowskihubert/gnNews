@@ -23,7 +23,7 @@ export const NewsModal: React.FC<Props> = ({ selectedNews }) => {
    
     <Modal open={isOpen} onClose={handleClose}>
        <div className='modal-container'>
-      <Box sx={{ width: 600, p: 2, }}>
+      <Box>
         <Typography variant="h4" component="h2" gutterBottom>
           {selectedNews.title}
         </Typography>

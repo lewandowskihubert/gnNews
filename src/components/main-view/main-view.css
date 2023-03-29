@@ -3,8 +3,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 5px;
-    margin-top: 36px;
+    overflow: hidden
+ 
     
     
     
@@ -20,5 +22,22 @@
     font-weight:500;
 }
 
+.arrow {
+    font-size: 56px;
+    animation: toleft 1s  linear alternate infinite;
+    color: #3057F8;
+}
 
+@keyframes toleft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-20px); }
+  }
+
+
+  @media (max-width:600px) {
+    .main-view-container {
+       width: 80%;
+    }
+    
+ }
 

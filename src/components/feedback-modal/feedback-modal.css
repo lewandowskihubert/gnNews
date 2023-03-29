@@ -19,15 +19,13 @@
      
     }
     @media (max-width: 600px) {
-      .modal-container {
-       
-        max-width: 300px;
-        
-       
-      }
+    .modal-container {
+      min-width: 250px;
+      max-height: 550px;
       
-      .modal-container img {
+      
+      
      
-        max-height: unset;
-      }
     }
+    
+  }

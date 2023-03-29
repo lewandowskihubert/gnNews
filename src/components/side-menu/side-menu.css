@@ -41,3 +41,11 @@
     height: 40px;
     
 }
+
+
+@media (max-width:350px) {
+  .side-menu-container {
+     width: 20%;
+  }
+  
+}

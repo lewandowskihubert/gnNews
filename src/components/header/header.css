@@ -90,10 +90,11 @@
     display: block;
     padding: 5px;
     cursor: pointer;
+   
   }
   
   .dropdown-toggle {
-    background-color: #fff;
+    background-color: #ECEEF8;
     border: none;
     cursor: pointer;
     margin-right: 12px;

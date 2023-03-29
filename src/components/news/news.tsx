@@ -28,7 +28,7 @@ export const NewsComponent:React.FC = () => {
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    height="140"
+                    height="150"
                     image={news.urlToImage === null ? fallBackImage : news.urlToImage}
                     alt="news-img"
                   />
