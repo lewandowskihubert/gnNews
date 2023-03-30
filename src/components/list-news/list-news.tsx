@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Avatar, ListItem, ListItemAvatar, Grid, ListItemText, Typography } from "@mui/material"
+import { Avatar, ListItem, ListItemAvatar, ListItemText, Typography } from "@mui/material"
 import { useAppSelector } from "../../app/hooks";
 import { selectNewsList } from "../../slices/news-slice";
 import "./list-news.css"

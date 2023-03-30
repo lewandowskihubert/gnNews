@@ -1,8 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../app/store';
 import { NewsArticle } from '../../types/news-api';
-import { Modal, Box, Typography, Button } from '@mui/material';
+import { Modal, Box, Typography} from '@mui/material';
 import { selectIsOpen, closeModal } from '../../slices/modal-slice';
 import { useAppDispatch } from '../../app/hooks';
 import "./news-modal.css"
@@ -41,7 +40,7 @@ export const NewsModal: React.FC<Props> = ({ selectedNews }) => {
           {selectedNews.content}
         </Typography>
         <Typography variant="body1" component="p" gutterBottom>
-          <a target='_blank' href={selectedNews.url}>Read more</a>
+          <a target='_blank' rel='noreferrer' href={selectedNews.url}>Read more</a>
         </Typography>
       </Box>
       </div>

@@ -1,4 +1,4 @@
-import { NewsArticle, NewsSource } from "../../types/news-api"
+import { NewsArticle } from "../../types/news-api"
 
 
 const newsApiDef = () => {
