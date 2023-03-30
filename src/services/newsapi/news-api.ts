@@ -21,7 +21,7 @@ const newsApiDef = () => {
 
     const getCountryNews = async (country:string):Promise <NewsArticle[] | undefined> => {
         try {
-            const url = `https://newsapi.org/v2/top-headlines?country=${country}&excludeSources=google-news&apiKey=4f9e8e4d176848eb84cae95fc1a76316`
+            const url = `https://newsapi.org/v2/top-headlines?country=${country}&sortBy=popularity&apiKey=4f9e8e4d176848eb84cae95fc1a76316`
             const response = await fetch(url)
             const countrySelect = await response.json();
             return countrySelect.articles as NewsArticle[]
