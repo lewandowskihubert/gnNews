@@ -37,7 +37,7 @@ export const NewsList:React.FC = () => {
                             {news.source.name} - {new Date(news.publishedAt).toLocaleString() }
                         </Typography>
                         <br />
-                        {news.description}
+                       
                     </>
                 }
             />

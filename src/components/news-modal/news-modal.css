@@ -18,6 +18,14 @@
     max-height: 400px;
    
   }
+
+  .modal-container a {
+    text-decoration: none;
+    cursor: pointer;
+    color:#3057F8;
+    font-style: italic;
+    font-weight: bold;
+  }
   @media (max-width: 600px) {
     .modal-container {
       min-width: 250px;
